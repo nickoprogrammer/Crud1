@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Course</title>
+</head>
+<body>
+    <h1>Update Course</h1>
+    <form action="{% url 'uprec' course.id %}" method="post">
+        {% csrf_token %}
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" value="{{ course.title }}"><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description">{{ course.description }}</textarea><br>
+        <label for="status">Status:</label><br>
+        <select name="status" id="status">
+            <option value="Published">Published</option>
+            <option value="Pending">Pending</option>
+        </select><br>
+        <br>
+        <input type="text" id="status" name="status" value="{{ course.status }}"><br>
+        <label for="is_premium">Is Premium:</label><br>
+        <input type="checkbox" id="is_premium" name="is_premium" {% if course.is_premium %}checked{% endif %}><br>
+        <label for="deleted_at">Deleted At:</label><br>
+        <input type="text" id="deleted_at" name="deleted_at" value="{% if course.deleted_at %}{{ course.deleted_at }}{% endif %}"><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+
+</html>

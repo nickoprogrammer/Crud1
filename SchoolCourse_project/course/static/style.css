@@ -1,0 +1,56 @@
+.container {
+    margin: 80px auto;
+    padding: 0 100px;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #110404;
+    padding: 6px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#customers #mid {
+    text-align: center;
+}
+
+.action-button {
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+}
+
+#add-course-button {
+    padding: 8px;
+    background-color: #1b18c7;
+    color: white;
+    border-radius: 4px;
+    border-color: #04AA6D;
+}
+
+h1 {
+    color: green;
+}
